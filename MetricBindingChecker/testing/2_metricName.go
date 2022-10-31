@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func MemoNameTest(key string, base64Value string) {
+func MetricNameTest(key string, base64Value string) {
 	// ------------------------------------------------- metric name -------------------------------------------------
 	fmt.Println("<------------------------------ Metric name of the metric binding ------------------------------>")
 	fmt.Println(" - MetricName MDO Key Field")

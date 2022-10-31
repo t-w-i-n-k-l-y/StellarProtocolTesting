@@ -41,7 +41,7 @@ func RefConstTest(keyReferredConstant string, base64DataReferredConstant string)
 	byteArryToHexString(byteArrayReferredConstant[9:10], "3. Data Type:")
 	byteArryToFloat64(byteArrayReferredConstant[10:18], "4. Value:")
 	byteArryToString(byteArrayReferredConstant[18:38], "5. Value Name:")
-	fmt.Println("\t\tActual value name: ", strings.Split(string(byteArrayReferredConstant[18:38]), "/	")[0])
+	fmt.Println("\t\tActual value name: ", strings.Split(string(byteArrayReferredConstant[18:38]), "/")[0])
 	byteArryToInt16(byteArrayReferredConstant[38:40], "6. Unit:")
 	byteArryToHexString(byteArrayReferredConstant[40:64], "7. For future use:")
 	
