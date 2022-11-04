@@ -31,14 +31,12 @@ func MasterGeneralInfoTest(key string, base64Value string) {
 
 	fmt.Println("Fields in the value field of the Master Data General Info Manage Data:")
 	byteArryToInt64(byteArrayMasterDataGeneralInfo[0:8], "1. Artifact ID:")
-
+	byteArryToInt64(byteArrayMasterDataGeneralInfo[8:16], "2. Primary key:")
 	fmt.Println()
-	fmt.Println("\t 2. Traceability Data Type:")
-	fmt.Println("\t\tByte array:", byteArrayMasterDataGeneralInfo[8:9])
-	fmt.Println("\t\tByte array length:", len(byteArrayMasterDataGeneralInfo[8:9]))
-	fmt.Println("\t\tValue in int:", byteArrayMasterDataGeneralInfo[8])
-
-	byteArryToInt64(byteArrayMasterDataGeneralInfo[9:17], "3. Primary key:")
+	fmt.Println("\t 3. Traceability Data Type:")
+	fmt.Println("\t\tByte array:", byteArrayMasterDataGeneralInfo[16:17])
+	fmt.Println("\t\tByte array length:", len(byteArrayMasterDataGeneralInfo[16:17]))
+	fmt.Println("\t\tValue in int:", byteArrayMasterDataGeneralInfo[16])
 	byteArryToHexString(byteArrayMasterDataGeneralInfo[17:64], "4. Future Use:")
 
 	fmt.Println()
