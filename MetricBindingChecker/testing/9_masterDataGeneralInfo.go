@@ -38,7 +38,8 @@ func MasterGeneralInfoTest(key string, base64Value string) {
 	fmt.Println("\t\tByte array length:", len(byteArrayMasterDataGeneralInfo[8:9]))
 	fmt.Println("\t\tValue in int:", byteArrayMasterDataGeneralInfo[8])
 
-	byteArryToHexString(byteArrayMasterDataGeneralInfo[9:64], "3. Future Use:")
+	byteArryToInt64(byteArrayMasterDataGeneralInfo[9:17], "3. Primary key:")
+	byteArryToHexString(byteArrayMasterDataGeneralInfo[17:64], "4. Future Use:")
 
 	fmt.Println()
 }

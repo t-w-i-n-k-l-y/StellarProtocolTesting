@@ -34,8 +34,9 @@ func FormulaIdentityTest(keyFormulaIdentity string, base64DataFormulaIdentity st
 	}
 
 	fmt.Println("Fields in the value field of the Formula Identity Manage Data:")
-	byteArryToInt64(byteArrayFormulaIdentity[0:8], "1. AuthorIdentity:")
-	byteArryToHexString(byteArrayFormulaIdentity[8:64], "3. FutureUse:")
+	byteArryToString(byteArrayFormulaIdentity[0:20], "1. Formula Name:")
+	byteArryToInt64(byteArrayFormulaIdentity[20:28], "2. AuthorIdentity:")
+	byteArryToHexString(byteArrayFormulaIdentity[28:64], "3. FutureUse:")
 
 	fmt.Println()
 }

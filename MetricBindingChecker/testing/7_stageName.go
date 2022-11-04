@@ -37,6 +37,7 @@ func StageNameTest(key string, base64Value string) {
 	fmt.Println("StageName full string: ", fullString)
 
 	base64FullString := fullString[0:byteArrayStageName[63]]
+	fmt.Println("base64FullString: ", base64FullString)
 	actualString, err := base64.StdEncoding.DecodeString(base64FullString)
 	if err != nil {
 		fmt.Println("Error: Error in decoding the base64 full string field")
