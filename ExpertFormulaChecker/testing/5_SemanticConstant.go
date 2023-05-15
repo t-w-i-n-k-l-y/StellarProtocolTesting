@@ -6,6 +6,24 @@ import (
 	"strings"
 )
 
+/*
+ * SemanticConstTest is used to test the details of semantic constant of the expert formula
+ * @param keySemanticConstant is the key of the semantic constant manage data of the expert formula
+ * @param base64DataSemanticConstant is the base64 encoded value of the semantic constant of the expert formula
+ * @return void
+
+ * Fields in the key field of the Semantic Constant Manage Data (64 bytes):
+ * 1. Semantic Constant description (40 bytes)
+ * 2. For future use (24 bytes)
+
+ * Fields in the value field of the Semantic Constant Manage Data (64 bytes):
+ * 1. Value Type (1 byte)
+ * 2. Value ID (8 bytes)
+ * 3. Data Type (1 byte)
+ * 4. Value Name (20 bytes)
+ * 5. For future use (34 bytes)
+ */
+
 func SemanticConstTest(keySemanticConstant string, base64DataSemanticConstant string) {
 	fmt.Println()
 	fmt.Println("<------------------------------ Expert Formula - Manage Data => Semantic Constant ------------------------------>")

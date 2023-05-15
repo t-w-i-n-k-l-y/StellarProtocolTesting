@@ -5,6 +5,19 @@ import (
 	"fmt"
 )
 
+/*
+ *MetricPublisherTest is used to test the metric publisher of the metric binding
+ *@param key is the key of the metric publisher of the metric binding
+ *@param base64Value is the base64 encoded value of the metric publisher of the metric binding
+ *@return void
+
+ *Fields in key field of the metric publisher of the metric binding (64 bytes):
+ *1. Metric Publisher Public Key (64 bytes)
+
+ *Fields in value field of the metric publisher of the metric binding (64 bytes):
+ *1. Metric Publisher Public Key cont. (64 bytes)
+ */
+
 func MetricPublisherTest(key string, base64Value string) {
 	// ------------------------------------------------- memo name -------------------------------------------------
 	fmt.Println()

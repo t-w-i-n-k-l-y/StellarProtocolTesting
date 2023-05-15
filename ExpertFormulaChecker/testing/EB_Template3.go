@@ -6,6 +6,21 @@ import (
 	"strings"
 )
 
+/*
+ * Template3Test is used to test the template 3 of equation building of the expert formula
+ * @param key is the key of the template 3 manage data of the expert formula
+ * @param value is the base64 encoded value of the template 3 of the expert formula
+ * @return void
+
+ * Fields in the key field of the Template 3 Manage Data (64 bytes):
+ * 1. Future use (64 bytes)
+
+ * Fields in the value field of the Template 3 Manage Data (64 bytes):
+ * 1. Template Type (1 byte)
+ * 2. Special Command ID (4 bytes)
+ * 3. Future Use (59 bytes)
+ */
+
 func Template3Test(key string, value string) {
 	fmt.Println()
 	fmt.Println("<------------------------------ Expert Formula equation building - Manage Data => Template 3 ------------------------------>")

@@ -5,6 +5,20 @@ import (
 	"fmt"
 )
 
+/*
+ * ReferredConstRefTest is used to test the referred constant reference of the expert formula
+ * @param keyfield is the key of the referred constant reference manage data of the expert formula
+ * @param valueField is the base64 encoded value of the referred constant reference of the expert formula
+ * @return void
+
+ * Fields in the key field of the Referred Constant Reference Manage Data (64 bytes):
+ * 1. Referred Constant Reference part 1 (64 bytes)
+
+ * Fields in the value field of the Referred Constant Reference Manage Data (64 bytes):
+ * 1. Referred Constant Reference part 2 (63 bytes)
+ * 2. Length of the Referred Constant Reference (1 byte)
+ */
+
 func ReferredConstRefTest(keyfield string, valueField string) {
 
 	fmt.Println()

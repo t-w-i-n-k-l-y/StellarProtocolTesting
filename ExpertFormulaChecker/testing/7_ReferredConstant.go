@@ -6,6 +6,26 @@ import (
 	"strings"
 )
 
+/*
+ * RefConstTest is used to test the referred constant of the expert formula
+ * @param keyReferredConstant is the key of the referred constant manage data of the expert formula
+ * @param base64DataReferredConstant is the base64 encoded value of the referred constant of the expert formula
+ * @return void
+
+ * Fields in the key field of the Referred Constant Manage Data (64 bytes):
+ * 1. Referred Constant description (40 bytes)
+ * 2. For future use (24 bytes)
+
+ * Fields in the value field of the Referred Constant Manage Data (64 bytes):
+ * 1. Value Type (1 byte)
+ * 2. Value ID (8 bytes)
+ * 3. Data Type (1 byte)
+ * 4. Value (8 bytes)
+ * 5. Value Name (20 bytes)
+ * 6. Unit (2 bytes)
+ * 7. For future use (24 bytes)
+ */
+
 func RefConstTest(keyReferredConstant string, base64DataReferredConstant string) {
 	// ------------------------------------------------- referred constant -------------------------------------------------
 	fmt.Println()

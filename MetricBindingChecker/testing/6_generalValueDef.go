@@ -6,6 +6,25 @@ import (
 	"strings"
 )
 
+/*
+ *GeneralValueDefTest is used to test the general value definition with metadata (This will be a compulsory field each variable in an activity)
+ *@param key is the key of the general value definition of the metric binding
+ *@param base64Value is the base64 encoded value of the general value definition of the metric binding
+ *@return void
+
+ *Fields in key field of the general value definition of the metric binding (64 bytes):
+ * Default value: "GENERAL VALUE DEFINITION"
+
+ *Fields in value field of the general value definition of the metric binding (64 bytes):
+ *1. Value ID (8 bytes)
+ *2. Variable name (20 bytes)
+ *3. Workflow ID (8 bytes)
+ *4. Stage ID (8 bytes)
+ *5. Traceability data type (1 byte)
+ *6. Binding type (1 byte)
+ *7. Future Use (18 bytes)
+ */
+
 func GeneralValueDefTest(key string, base64Value string) {
 	// ------------------------------------------------- General Value Definition -------------------------------------------------
 	fmt.Println("<------------------------------ General Value Definition of the metric binding ------------------------------>")

@@ -5,6 +5,20 @@ import (
 	"fmt"
 )
 
+/*
+ *MasterMetaDataTest is used to test the master data metadata of the metric binding
+ *@param key is the key of the master data metadata of the metric binding
+ *@param base64Value is the base64 encoded value of the master data metadata of the metric binding
+ *@return void
+
+ *Fields in key field of the master data metadata of the metric binding (64 bytes):
+ *1. Metadata name (64 bytes)
+
+ *Fields in value field of the master data metadata of the metric binding (64 bytes):
+ *1. Metadata Name cont. (63 bytes)
+ *2. Length of the Metadata name (1 byte)
+ */
+
 func MasterMetaDataTest(key string, base64Value string) {
 	// ------------------------------------------------- Master Data Meta Data -------------------------------------------------
 	fmt.Println("<------------------------------ Master Data Meta Data of the metric binding ------------------------------>")

@@ -6,6 +6,21 @@ import (
 	"strings"
 )
 
+/*
+ * FormulaIdentityTest is used to test the formula identity of the expert formula
+ * @param keyFormulaIdentity is the key of the formula identity manage data of the expert formula
+ * @param base64DataFormulaIdentity is the base64 encoded value of the formula identity of the expert formula
+ * @return void
+
+ * Fields in the value field of the Formula Identity Manage Data (64 bytes):
+ 1. Author ID			(8 bytes)
+ 2. Formula Name		(20 bytes)
+ 3. Future use			(36 bytes)
+
+ * Fields in the key field of the Formula Identity Manage Data (64 bytes):
+ 1. Formula description	(64 bytes)
+*/
+
 func FormulaIdentityTest(keyFormulaIdentity string, base64DataFormulaIdentity string) {
 	// ------------------------------------------------- formula identity -------------------------------------------------
 	fmt.Println()
@@ -17,7 +32,7 @@ func FormulaIdentityTest(keyFormulaIdentity string, base64DataFormulaIdentity st
 	if len(keyFormulaIdentity) != 64 {
 		fmt.Println("Error: The length of the key field is not 64")
 	}
-	fmt.Println("\tActual Formula name: ", strings.Split(keyFormulaIdentity, "/")[0])
+	fmt.Println("\tActual Formula Description: ", strings.Split(keyFormulaIdentity, "/")[0])
 
 	fmt.Println()
 	fmt.Println(" - Formula Identity Value Field")
@@ -34,8 +49,8 @@ func FormulaIdentityTest(keyFormulaIdentity string, base64DataFormulaIdentity st
 	}
 
 	fmt.Println("Fields in the value field of the Formula Identity Manage Data:")
-	byteArryToString(byteArrayFormulaIdentity[0:20], "1. Formula Name:")
-	byteArryToInt64(byteArrayFormulaIdentity[20:28], "2. AuthorIdentity:")
+	byteArryToString(byteArrayFormulaIdentity[0:8], "1. AuthorIdentity:")
+	byteArryToInt64(byteArrayFormulaIdentity[8:28], "2. Formula Name:")
 	byteArryToHexString(byteArrayFormulaIdentity[28:64], "3. FutureUse:")
 
 	fmt.Println()

@@ -6,6 +6,19 @@ import (
 	"strings"
 )
 
+/*
+ * SemanticConstValueTest is used to test the semantic constant value of the expert formula
+ * @param keyfield is the key of the semantic constant value manage data of the expert formula
+ * @param valueField is the base64 encoded value of the semantic constant value of the expert formula
+ * @return void
+
+ * Fields in the key field of the Semantic Constant Value Manage Data (64 bytes):
+ * 1. Semantic Constant Value (64 bytes)
+
+ * Fields in the value field of the Semantic Constant Value Manage Data (64 bytes):
+ * 1. For future use (64 bytes)
+ */
+
 func SemanticConstValueTest(keyfield string, valueField string) {
 	fmt.Println()
 	fmt.Println("<------------------------------ Expert Formula - Manage Data => Semantic Constant Value ------------------------------>")

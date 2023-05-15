@@ -5,6 +5,20 @@ import (
 	"fmt"
 )
 
+/*
+* MasterFieldNameTest is used to test the master data field name of the metric binding
+* @param key is the key of the master data field name of the metric binding
+* @param base64Value is the base64 encoded value of the master data field name of the metric binding
+* @return void
+
+* Fields in key field of the master data field name of the metric binding (64 bytes):
+* 1. Field Name name (64 bytes)
+
+* Fields in value field of the master data field name of the metric binding (64 bytes):
+* 1. Field Name name cont. (63 bytes)
+* 2. Length of the Field Name name (1 byte)
+ */
+
 func MasterFieldNameTest(key string, base64Value string) {
 	// ------------------------------------------------- Master Data Field Name -------------------------------------------------
 	fmt.Println("<------------------------------ Master Data Field Name of the metric binding ------------------------------>")

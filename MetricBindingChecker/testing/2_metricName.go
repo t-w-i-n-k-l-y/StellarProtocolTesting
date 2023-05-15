@@ -5,6 +5,20 @@ import (
 	"fmt"
 )
 
+/*
+*MetricNameTest is used to test the metric name of the metric binding
+*@param key is the key of the metric name of the metric binding
+*@param base64Value is the base64 encoded value of the metric name of the metric binding
+*@return void
+
+*Fields in key field of the metric name of the metric binding (64 bytes):
+*1. Metric Name (64 bytes)
+
+*Fields in value field of the metric name of the metric binding (64 bytes):
+*1. Metric Name cont. (63 bytes)
+*2. Length of Metric Name (1 byte)
+ */
+
 func MetricNameTest(key string, base64Value string) {
 	// ------------------------------------------------- metric name -------------------------------------------------
 	fmt.Println("<------------------------------ Metric name of the metric binding ------------------------------>")

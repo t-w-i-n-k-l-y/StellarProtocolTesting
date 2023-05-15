@@ -24,6 +24,13 @@ import (
 		|		meta data(master data) 				=>	testing.MasterMetaDataTest(name, value)
 		|		field key(master data) 				=>	testing.MasterFieldKeyTest(name, value)
 		|		field name(master data) 			=>	testing.MasterFieldNameTest(name, value)
+
+		If pivot fields are available ->
+			pivot definition 			=>	testing.PivotFieldDefTest(name, value)
+			1. 1st MDO -> pivot field name 	=>	testing.PivotFieldNameTest(name, value)
+			2. 2nd MDO -> pivot field key 	=>	testing.PivotFieldValueTest(name, value)
+			3. 3rd MDO -> pivot field value 	=>	testing.PivotFieldFieldTest(name, value)
+			4. 4th MDO -> pivot field type 	=>	testing.PivotFieldKeyTest(name, value)
 */
 
 func main() {

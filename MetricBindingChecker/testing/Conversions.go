@@ -6,24 +6,9 @@ import (
 	"fmt"
 )
 
-//func Float64frombytes(bytes []byte) float64 {
-//	bits := binary.LittleEndian.Uint64(bytes)
-//	float := math.Float64frombits(bits)
-//	return float
-//}
-//
-//func byteArryToFloat64(b []byte, name string) {
-//	c := []byte(b)
-//	fmt.Println()
-//	fmt.Println("\t", name)
-//	fmt.Println("\t\tByte array:", c)
-//	fmt.Println("\t\tByte array length:", len(c))
-//	base64EncodedStr := base64.StdEncoding.EncodeToString(c)
-//
-//	decodedToBytes, _ := base64.StdEncoding.DecodeString(base64EncodedStr)
-//	fmt.Println("\t\tValue in float:", Float64frombytes(decodedToBytes))
-//
-//}
+/*
+ * This file contains common type conversions used in metric binding test codes
+ */
 
 func byteArryToInt64(b []byte, name string) {
 	c := []byte(b)

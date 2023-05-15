@@ -5,6 +5,19 @@ import (
 	"fmt"
 )
 
+/*
+ * AuthorIdentityTest is used to test the author identity of the expert formula
+ * @param keyAuthorIdentity is the key of the author identity manage data of the expert formula
+ * @param base64DataAuthorIdentity is the base64 encoded value of the author identity of the expert formula
+ * @return void
+
+ * Fields in the key field of the Author Identity Manage Data (64 bytes):
+  1. Author Primary key	(64 bytes)
+
+ * Fields in the value field of the Author Identity Manage Data (64 bytes):
+  1. Future use (64 bytes)
+*/
+
 func AuthorIdentityTest(keyAuthorIdentity string, base64DataAuthorIdentity string) {
 	// ------------------------------------------------- author identity -------------------------------------------------
 	fmt.Println()

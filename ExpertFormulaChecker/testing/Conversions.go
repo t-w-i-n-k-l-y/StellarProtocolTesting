@@ -8,6 +8,10 @@ import (
 	"math"
 )
 
+/*
+* this file contains common conversion functions used in the testing package
+ */
+
 func Float64frombytes(bytes []byte) float64 {
 	bits := binary.LittleEndian.Uint64(bytes)
 	float := math.Float64frombits(bits)

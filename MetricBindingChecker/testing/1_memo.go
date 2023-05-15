@@ -5,6 +5,20 @@ import (
 	"fmt"
 )
 
+/*
+ * MemoTest is used to test the memo of the metric binding
+ * @param base64DataMemo is the base64 encoded value of the memo of the metric binding
+ * @return void
+
+ * Fields in the memo of the metric binding (28 bytes):
+ * 1. Manifest (10 bytes)
+ * 2. Metric ID (8 bytes)
+ * 3. Tenant ID (4 bytes)
+ * 4. No of formula (2 bytes)
+ * 5. No of manage data (1 byte)
+ * 6. For future use (3 bytes)
+ */
+
 func MemoTest(base64DataMemo string) {
 	// ------------------------------------------------- memo -------------------------------------------------
 	fmt.Println("<------------------------------ Memo of the metric binding ------------------------------>")

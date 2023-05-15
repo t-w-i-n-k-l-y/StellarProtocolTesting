@@ -5,6 +5,22 @@ import (
 	"fmt"
 )
 
+/*
+ *MasterGeneralInfoTest is used to test the master data general info with metadata (This will be a compulsory field for every activity)
+ *@param key is the key of the master data general info of the metric binding
+ *@param base64Value is the base64 encoded value of the master data general info of the metric binding
+ *@return void
+
+ *Fields in key field of the master data general info of the metric binding (64 bytes):
+ * Default value: "MASTER DATA DEFINITION"
+
+ *Fields in value field of the master data general info of the metric binding (64 bytes):
+ *1. Artifact ID (8 bytes)
+ *2. Primary key row ID (8 bytes)
+ *3. Traceability data type (1 byte)
+ *4. Future Use (47 bytes)
+ */
+
 func MasterGeneralInfoTest(key string, base64Value string) {
 	// ------------------------------------------------- Master Data General Info -------------------------------------------------
 	fmt.Println("<------------------------------ Master Data General Info of the metric binding ------------------------------>")

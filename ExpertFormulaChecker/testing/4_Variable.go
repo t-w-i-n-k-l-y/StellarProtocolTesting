@@ -6,6 +6,25 @@ import (
 	"strings"
 )
 
+/*
+ * VariableTest is used to test one variable of the expert formula
+ * @param keyVariable is the key of the key field of manage data of the expert formula
+ * @param base64DataVariable is the base64 encoded value of the value field of manage data of the expert formula
+
+ * Fields in the key field of the Manage Data (64 bytes):
+ * 1. Variable description (40 bytes)
+ * 2. For future use (24 bytes)
+
+ * Fields in the value field of the Manage Data (64 bytes):
+ * 1. Value Type (1 byte)
+ * 2. Value ID (8 bytes)
+ * 3. Variable Name (20 bytes)
+ * 4. Data Type (1 byte)
+ * 5. Unit (2 bytes)
+ * 6. Precision (1 byte)
+ * 7. For future use (31 bytes)
+ */
+
 func VariableTest(keyVariable string, base64DataVariable string) {
 
 	fmt.Println("<------------------------------ Expert Formula - Manage Data => Variable ------------------------------>")
